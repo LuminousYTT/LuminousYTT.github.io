@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="LuminousYT">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Problem DescriptionCF (Card Fight) 是一款经典的卡牌战斗游戏，拥有丰富的卡牌和五花八门的机制。 小D作为一个游戏主播在直播CF时遇到了一个难题，进行了以下的思考： “😵哦不对，我打错了！🤓✋哦对的对的，🤨哦不对，😫啊我跟你们说不对，哎呀不对‍，🤔哦对的对的对的对…对吗？哦对的对的对的😁，😐😨不对吧，啊我都搞晕掉了😵‍💫哦😲对对对对对，对对对对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对">
+<meta property="og:url" content="http://example.com/2025/03/01/problem1/index.html">
+<meta property="og:site_name" content="LuminousYT">
+<meta property="og:description" content="Problem DescriptionCF (Card Fight) 是一款经典的卡牌战斗游戏，拥有丰富的卡牌和五花八门的机制。 小D作为一个游戏主播在直播CF时遇到了一个难题，进行了以下的思考： “😵哦不对，我打错了！🤓✋哦对的对的，🤨哦不对，😫啊我跟你们说不对，哎呀不对‍，🤔哦对的对的对的对…对吗？哦对的对的对的😁，😐😨不对吧，啊我都搞晕掉了😵‍💫哦😲对对对对对，对对对对">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-01T11:35:05.000Z">
+<meta property="article:modified_time" content="2025-03-02T14:18:16.264Z">
+<meta property="article:author" content="LuminousYT">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对 - LuminousYT</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>LuminousYT</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-01 19:35" pubdate>
+          2025年3月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>CF (Card Fight) 是一款经典的卡牌战斗游戏，拥有丰富的卡牌和五花八门的机制。</p>
+<p>小D作为一个游戏主播在直播CF时遇到了一个难题，进行了以下的思考：</p>
+<p>“😵哦不对，我打错了！🤓✋哦对的对的，🤨哦不对，😫啊我跟你们说不对，哎呀不对‍，🤔哦对的对的对的对…对吗？哦对的对的对的😁，😐😨不对吧，啊我都搞晕掉了😵‍💫哦😲对对对对对，对对对对我明白了🤓…”</p>
+<p>由于脑子过载，小D经历了千般转折，但是熟知他的观众都早已经了解他的思考方式了：</p>
+<ul>
+<li>小D说的话经过录播记录变成由大写字母组成的字符串。</li>
+<li>如果子序列的YES比NO多，小D就会说 “DUI DE”（对的）</li>
+<li>如果子序列的NO比YES多，小D就会说 “BUDUI BUDUI”（不对不对）</li>
+<li>如果子序列的YES和NO一样多，小D就会说 “DUI DUI DUIMA”（对 对 对吗？）</li>
+</ul>
+<p>但是小D经常再三思考，他会尝试修改原来记录中的任意一个字符以尽可能改变原来的答案，如果改变成功了，他就会恍然大悟，附带一句 “O”（哦！），来表达他的惊讶之情：</p>
+<ul>
+<li>原来是 “DUI DE”，他思考后能变成不对就会恍然大悟，最后说出”O BUDUI BUDUI”</li>
+<li>原来是 “BUDUI BUDUI”，他思考后能变成对的也会恍然大悟，最后说出”O DUI DE”</li>
+<li>如果原来就是一样多，他就会说出”DUI DUI DUIMA”</li>
+<li>如果没有改变或者最多变成一样多，他就会说出原来的答案</li>
+</ul>
+<p>你可以预测出小D要说的下一句话吗？</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>每个测试包含多个测试用例。第一行包含测试用例的数量 $t \ (0≤t≤100)$。测试用例说明如下。</p>
+<p>每个测试用例由一行字符串 $S$  $(|S|≤10^5)$组成，代表小D说过的话。</p>
+<p>保证所有测试用例中 $|S|$ 的总和不超过 $2×10^6$。</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>对于每个测试用例，输出两行</p>
+<p>第一行由两个数字组成由空格分开，表示原来字符串中YES的子序列数量和NO的子序列数量。</p>
+<p>第二行是一个字符串，表示小D接下来会说的话。</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-number">3</span> <br><span class="hljs-keyword">YES</span><br>YYEESSNOOO <br>ABULAIKESIYESNO<br></code></pre></td></tr></table></figure>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">1</span> <span class="hljs-number">0</span> <br><span class="hljs-attribute">DUI</span> DE <br><span class="hljs-attribute">8</span> <span class="hljs-number">3</span> <br><span class="hljs-attribute">O</span> BUDUI BUDUI <br><span class="hljs-attribute">1</span> <span class="hljs-number">1</span> <br><span class="hljs-attribute">DUI</span> DUI DUIMA<br></code></pre></td></tr></table></figure>
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>在刘春英老师发的题解上进行补充。</p>
+<p>子序列问题，考虑dp。例如我们求字符串当中YES的数量。我们定义<code>pre_yes[i]</code>为在i前面有多少个yes的数量。<code>pre_ye[i] pre_y[i]</code>同理。那么我们就可以得出递推式<code>pre_yes[i] = pre_yes[i - 1] + (s[i] == &#39;S&#39;) * pre_ye[i - 1]</code>（其他同理）。题目中的第一问就是输出<code>pre_yes[len]</code>和<code>pre_no[len]</code>。</p>
+<p>第二问，我们可以遍历字符串去计算修改这个字母对于YES和NO个数的贡献。当YES的数量小于NO的数量时，我们肯定是贪心的把每个字符修改成Y或者E或者S，怎么计算呢？举个例子，假设遍历到的字母是Y，我们首先先要减去这个Y对于YES子序列的贡献，这个贡献就是<code>suf_es[i]</code>，然后再加上E或者S做出贡献的最大值。算E做出贡献的时候，肯定是算前面有多少个Y，后面有多少个S，两者再相乘，注意在算的时候是<code>(pre_y[i] - 1) * (suf_s[i])</code> ，减去1是因为当前字母本身就是Y。剩下11种情况基本同理。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> int long long</span><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">2e5</span> + <span class="hljs-number">50</span>;<br><span class="hljs-type">int</span> pre_y[N], pre_ye[N], pre_yes[N];<br><span class="hljs-type">int</span> pre_n[N], pre_no[N];<br><span class="hljs-type">int</span> suf_es[N], suf_s[N];<br><span class="hljs-type">int</span> pre[<span class="hljs-number">30</span>][N], suf[<span class="hljs-number">30</span>][N];<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> len, cnty = <span class="hljs-number">0</span>, cntn = <span class="hljs-number">0</span>;<br>	string s;<br>	cin &gt;&gt; s;<br>	len = s.<span class="hljs-built_in">length</span>();<br>	s = <span class="hljs-string">&quot; &quot;</span> + s;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= len + <span class="hljs-number">1</span>; ++i)<br>	&#123;<br>		pre_y[i] = pre_ye[i] = pre_yes[i] = <span class="hljs-number">0</span>;<br>		pre_n[i] = pre_no[i] = <span class="hljs-number">0</span>;<br>		suf_es[i] = suf_s[i] = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> j = <span class="hljs-string">&#x27;A&#x27;</span>; j &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>; ++j)<br>			pre[j - <span class="hljs-string">&#x27;A&#x27;</span>][i] = suf[j - <span class="hljs-string">&#x27;A&#x27;</span>][i] = <span class="hljs-number">0</span>;<br>	&#125;<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= len; ++i)<span class="hljs-comment">//前缀</span><br>	&#123;<br>		pre_y[i] = pre_y[i - <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;Y&#x27;</span>);<br>		pre_ye[i] = pre_ye[i - <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;E&#x27;</span>) * pre_y[i - <span class="hljs-number">1</span>];<br>		pre_yes[i] = pre_yes[i - <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;S&#x27;</span>) * pre_ye[i - <span class="hljs-number">1</span>];<br>		pre_n[i] = pre_n[i - <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;N&#x27;</span>);<br>		pre_no[i] = pre_no[i - <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;O&#x27;</span>) * pre_n[i - <span class="hljs-number">1</span>];<br><br>		pre[s[i] - <span class="hljs-string">&#x27;A&#x27;</span>][i]++;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> j = <span class="hljs-string">&#x27;A&#x27;</span>; j &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>; ++j)<br>			pre[j - <span class="hljs-string">&#x27;A&#x27;</span>][i] += pre[j - <span class="hljs-string">&#x27;A&#x27;</span>][i - <span class="hljs-number">1</span>];<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = len; i &gt;= <span class="hljs-number">1</span>; --i)<span class="hljs-comment">//后缀</span><br>	&#123;<br>		suf_s[i] = suf_s[i + <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;S&#x27;</span>);<br>		suf_es[i] = suf_es[i + <span class="hljs-number">1</span>] + (s[i] == <span class="hljs-string">&#x27;E&#x27;</span>) * suf_s[i + <span class="hljs-number">1</span>];<br><br>		suf[s[i] - <span class="hljs-string">&#x27;A&#x27;</span>][i]++;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> j = <span class="hljs-string">&#x27;A&#x27;</span>; j &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>; ++j)<br>			suf[j - <span class="hljs-string">&#x27;A&#x27;</span>][i] += suf[j - <span class="hljs-string">&#x27;A&#x27;</span>][i + <span class="hljs-number">1</span>];<br>	&#125;<br><br>	cnty = pre_yes[len], cntn = pre_no[len];<br>	cout &lt;&lt; pre_yes[len] &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; pre_no[len] &lt;&lt; endl;<br>	<span class="hljs-keyword">if</span> (pre_yes[len] &gt; pre_no[len])<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= len; ++i)<br>		&#123;<br>			<span class="hljs-type">int</span> cony = <span class="hljs-number">0</span>, conn = <span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;Y&#x27;</span>)<br>			&#123;<br>				cony = suf_es[i];<br>				conn = <span class="hljs-built_in">max</span>(suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i], pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i]); <span class="hljs-comment">// N O</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;E&#x27;</span>)<br>			&#123;<br>				cony = pre_y[i] * suf_s[i];<br>				conn = <span class="hljs-built_in">max</span>(suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i], pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i]); <span class="hljs-comment">// N O</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;S&#x27;</span>)<br>			&#123;<br>				cony = pre_ye[i];<br>				conn = <span class="hljs-built_in">max</span>(suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i], pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i]); <span class="hljs-comment">// N O</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;N&#x27;</span>)<br>			&#123;<br>				conn -= suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i];<br>				conn += pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i] - <span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;O&#x27;</span>)<br>			&#123;<br>				conn -= pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i];<br>				conn += suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i] - <span class="hljs-number">1</span>;<br>			&#125;<br>			<span class="hljs-keyword">else</span><br>				conn = <span class="hljs-built_in">max</span>(pre[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i], suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i]);<br>			<span class="hljs-keyword">if</span> (cnty - cony &lt; cntn + conn)<br>			&#123;<br>				cout &lt;&lt; <span class="hljs-string">&quot;O BUDUI BUDUI&quot;</span> &lt;&lt; endl;<br>				<span class="hljs-keyword">return</span>;<br>			&#125;<br>		&#125;<br>		cout &lt;&lt; <span class="hljs-string">&quot;DUI DE&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (pre_yes[len] &lt; pre_no[len])<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= len; ++i)<br>		&#123;<br>			<span class="hljs-type">int</span> cony = <span class="hljs-number">0</span>, conn = <span class="hljs-number">0</span>;<br>			<span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;Y&#x27;</span>)<br>			&#123;<br>				cony -= suf_es[i];<br>				cony += <span class="hljs-built_in">max</span>((pre_y[i] - <span class="hljs-number">1</span>) * (suf_s[i]), pre_ye[i - <span class="hljs-number">1</span>]); <span class="hljs-comment">// E S</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;E&#x27;</span>)<br>			&#123;<br>				cony -= pre_y[i] * suf_s[i];<br>				cony += <span class="hljs-built_in">max</span>(suf_es[i + <span class="hljs-number">1</span>], pre_ye[i - <span class="hljs-number">1</span>]); <span class="hljs-comment">// Y S</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;S&#x27;</span>)<br>			&#123;<br>				cony -= pre_ye[i];<br>				cony += <span class="hljs-built_in">max</span>(suf_es[i + <span class="hljs-number">1</span>], (pre_y[i]) * (suf_s[i] - <span class="hljs-number">1</span>)); <span class="hljs-comment">// Y E</span><br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;N&#x27;</span>)<br>			&#123;<br>				cony = <span class="hljs-built_in">max</span>(&#123;suf_es[i], pre_y[i] * suf_s[i], pre_ye[i]&#125;);<br>				conn = suf[<span class="hljs-string">&#x27;O&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i];<br>			&#125;<br>			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&#x27;O&#x27;</span>)<br>			&#123;<br>				cony = <span class="hljs-built_in">max</span>(&#123;suf_es[i], pre_y[i] * suf_s[i], pre_ye[i]&#125;);<br>				conn = suf[<span class="hljs-string">&#x27;N&#x27;</span> - <span class="hljs-string">&#x27;A&#x27;</span>][i];<br>			&#125;<br>			<span class="hljs-keyword">else</span><br>				cony = <span class="hljs-built_in">max</span>(&#123;suf_es[i], pre_y[i] * suf_s[i], pre_ye[i]&#125;);<br>			<span class="hljs-keyword">if</span> (cnty + cony &gt; cntn - conn)<br>			&#123;<br>				cout &lt;&lt; <span class="hljs-string">&quot;O DUI DE&quot;</span> &lt;&lt; endl;<br>				<span class="hljs-keyword">return</span>;<br>			&#125;<br>		&#125;<br>		cout &lt;&lt; <span class="hljs-string">&quot;BUDUI BUDUI&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>		cout &lt;&lt; <span class="hljs-string">&quot;DUI DUI DUIMA&quot;</span> &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对</div>
+      <div>http://example.com/2025/03/01/problem1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>LuminousYT</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/02/18/blockedmemory/" title="Blocked Memory">
+                        <span class="hidden-mobile">Blocked Memory</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

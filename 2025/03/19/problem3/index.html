@@ -19,21 +19,21 @@
   <meta name="author" content="LuminousYT">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Problem Description对于一个长度为 $n$ 的数组 $a$ ，定义 $val(l,r) &#x3D;\min(a_l,a_{l+1},…,a_{r-1},a_r)+\max(a_l,a_{l+1},…,a_{r-1},a_r)$ 。小y想知道对于所有的 $val(l,r),1\le l \le r \le n$ ，降序排列后，第 $k$ 个数是多少，也就是第 $k$ 大的 $va">
+    <meta name="description" content="Problem Description你有一个 $n$ 行 $m$ 列的方格，每个格子都填有 0123456789+-* 中的某一个字符。 你从左上角出发，每次可以向右或向下走一格，直到走到右下角。有多少种走法，把经过的所有字符按经过顺序排成一排可以得到一个合法的算式，该算式的得数是 $k$ 的倍数？输出对 $10^9+7$ 求余。 保证左上角、右下角的格子都是数字。称一个算式合法当且仅当没有两个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【25杭电春季营热身赛】 T1001 氯化钠">
-<meta property="og:url" content="http://example.com/2025/03/05/problem2/index.html">
+<meta property="og:title" content="【25杭电春季营（2）】 T1007 学计算导致的">
+<meta property="og:url" content="http://example.com/2025/03/19/problem3/index.html">
 <meta property="og:site_name" content="LuminousYT">
-<meta property="og:description" content="Problem Description对于一个长度为 $n$ 的数组 $a$ ，定义 $val(l,r) &#x3D;\min(a_l,a_{l+1},…,a_{r-1},a_r)+\max(a_l,a_{l+1},…,a_{r-1},a_r)$ 。小y想知道对于所有的 $val(l,r),1\le l \le r \le n$ ，降序排列后，第 $k$ 个数是多少，也就是第 $k$ 大的 $va">
+<meta property="og:description" content="Problem Description你有一个 $n$ 行 $m$ 列的方格，每个格子都填有 0123456789+-* 中的某一个字符。 你从左上角出发，每次可以向右或向下走一格，直到走到右下角。有多少种走法，把经过的所有字符按经过顺序排成一排可以得到一个合法的算式，该算式的得数是 $k$ 的倍数？输出对 $10^9+7$ 求余。 保证左上角、右下角的格子都是数字。称一个算式合法当且仅当没有两个">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-05T07:11:08.000Z">
-<meta property="article:modified_time" content="2025-03-05T10:47:28.189Z">
+<meta property="article:published_time" content="2025-03-19T13:53:31.000Z">
+<meta property="article:modified_time" content="2025-03-19T14:33:42.113Z">
 <meta property="article:author" content="LuminousYT">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>【25杭电春季营热身赛】 T1001 氯化钠 - LuminousYT</title>
+  <title>【25杭电春季营（2）】 T1007 学计算导致的 - LuminousYT</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【25杭电春季营热身赛】 T1001 氯化钠"></span>
+            <span id="subtitle" data-typed-text="【25杭电春季营（2）】 T1007 学计算导致的"></span>
           
         </div>
 
@@ -222,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-05 15:11" pubdate>
-          2025年3月5日 下午
+        <time datetime="2025-03-19 21:53" pubdate>
+          2025年3月19日 晚上
         </time>
       </span>
     
@@ -282,27 +282,50 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【25杭电春季营热身赛】 T1001 氯化钠</h1>
+            <h1 id="seo-header">【25杭电春季营（2）】 T1007 学计算导致的</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>对于一个长度为 $n$ 的数组 $a$ ，定义 $val(l,r) &#x3D;\min(a_l,a_{l+1},…,a_{r-1},a_r)+\max(a_l,a_{l+1},…,a_{r-1},a_r)$ 。小y想知道对于所有的 $val(l,r),1\le l \le r \le n$ ，降序排列后，第 $k$ 个数是多少，也就是第 $k$ 大的 $val$ 。</p>
-<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>第一行一个正整数 $T (T≤200)$ 表示数据组数。</p>
-<p>对于每组数据：</p>
-<p>第一行输入两个整数 $n$ 和 $k$，$(1≤n≤10^5，1≤k≤\frac{n(n+1)}{2})$ 分别表示数组长度，要求第多少大的 $val$。</p>
-<p>第二行包含 $n$ 个用空格分隔的整数，其中第 $i$ 个数字表示 $a_i$ 的值。 $(0≤a_i≤10^9)$ 。</p>
-<p>保证 $∑n&#x3D;1064824$。</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>对于每组数据，输出一个整数，表示所有的 $val(l,r)$ ，$1≤l≤r≤n$ 中，第 $k$ 大的 $val$ 的大小。</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-number">2</span><br><span class="hljs-symbol">5 </span><span class="hljs-number">3</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span><br><span class="hljs-symbol">10 </span><span class="hljs-number">10</span><br><span class="hljs-symbol">9 </span><span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">4</span> <span class="hljs-number">7</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
+                <h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>你有一个 $n$ 行 $m$ 列的方格，每个格子都填有 <code>0123456789+-*</code> 中的某一个字符。</p>
+<p>你从左上角出发，每次可以向右或向下走一格，直到走到右下角。有多少种走法，把经过的所有字符按经过顺序排成一排可以得到一个<strong>合法的</strong>算式，该算式的得数是 $k$ 的倍数？输出对 $10^9+7$ 求余。</p>
+<p>保证左上角、右下角的格子都是数字。称一个算式合法当且仅当没有两个连续的运算符。<strong>我们允许数字有前导零，并且此时和 C++ 规则不同，仍把数字看作十进制数。</strong></p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p><strong>本题输入有多组测试数据。</strong> 输入的第一行有一个正整数 $T（1≤T≤5）$ ，表示数据组数。之后的每一组数据格式如下：</p>
+<p>输入的第一行有三个正整数 $n,m,k（2≤n,m≤100，2≤k≤20）$ ，分别表示方格的行数和列数，以及得数的要求。</p>
+<p>之后 $n$ 行，每行有 $m$ 个字符，表示这个方格。</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>输出一行一个自然数，表示符合题意的走法数量对 $10^9+7$ 取余的结果。</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">1 </span><br><span class="hljs-symbol">3 </span><span class="hljs-number">4</span> <span class="hljs-number">3</span> <br><span class="hljs-number">1</span>+<span class="hljs-number">07</span> <br><span class="hljs-number">4</span>-<span class="hljs-number">2</span>* <br><span class="hljs-number">22</span>-<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">7<br>13<br></code></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p><code>4</code></p>
+<h2 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h2><p>【样例解释】</p>
+<p>在给定的网格中，有 $10$ 种可能的走法，得到的算式如下：</p>
+<ul>
+<li><code>1+07*9</code> 等于 $64$。</li>
+<li><code>1+02*9</code> 等于 $19$。</li>
+<li><code>1+02-9</code> 等于 $−6$。</li>
+<li><code>1+-???</code>（这类走法有 $3$ 种，均不合法）</li>
+<li><code>14-2*9</code> 等于 $−4$。</li>
+<li><code>14-2-9</code>（注意有 $2$ 种走法都会得到这个算式，但是算两次）等于 $3$ 。</li>
+<li><code>1422-9</code> 等于 $1413$ 。</li>
+</ul>
+<p>这 $10$ 种走法中，有 $4$ 种走法对应的算式合法，并且得数是 $3$ 的倍数。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>由于在一个不带括号的式子当中，既有加号又有乘号，需要先算乘号。没有办法维护乘法优先进行计算的操作。我们注意到<del>（注意力惊人）</del>，一个表达式最终可以化成 $sum+mul \times cur$ 的形式。 $sum$ 表示之前计算到的和， $mul$ 表示当前项的系数， $cur$ 为当前的数。题目中的 $k$ 只有 $20$，$sum,mul,cur$ 均为在 $\mod k$ 意义下的值。可以得到一个 $O(nmk^3)$ 的DP算法，具体转移如下：</p>
+<ul>
+<li><p>如果是一个数字 $num$ ，只需要 $cur \gets (10cur+num)$ 。</p>
+</li>
+<li><p>如果是加号，则 $sum \gets sum + mul \times cur,mul \gets 1,cur\gets 0$ 。</p>
+</li>
+<li><p>如果是减号，则 $sum \gets sum + mul \times cur,mul \gets -1,cur\gets 0$ 。</p>
+</li>
+<li><p>如果是乘号，则 $mul \gets (mul\times cur),cur\gets 0$ 。</p>
+</li>
+<li><p>相邻格都是符号则不能转移。</p>
+</li>
+</ul>
+<p>所以，我们只需要枚举一下前面格子的 $sum,mul,cur$ 。由于都是在 $\mod k$ 意义下，可以把 $sum,mul,cur$ 进行状压。我们可以对这个状态的转移建立一个自动机来减少计算次数。</p>
+<p>答案就是在 $(n,m)$ 时，满足值为 $0$ 状态的路径数。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e2</span> + <span class="hljs-number">50</span>;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> MOD = <span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>;<br><span class="hljs-type">int</span> n, m, k;<br><span class="hljs-type">int</span> st[N][N * <span class="hljs-number">80</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getid</span><span class="hljs-params">(<span class="hljs-type">int</span> sum, <span class="hljs-type">int</span> mul, <span class="hljs-type">int</span> cur)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">return</span> sum * k * k + mul * k + cur;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>	cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;<br>	vector&lt;vector&lt;<span class="hljs-type">char</span>&gt;&gt; <span class="hljs-built_in">a</span>(n + <span class="hljs-number">5</span>, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">char</span>&gt;(m + <span class="hljs-number">5</span>));<br><br>	vector&lt;vector&lt;array&lt;<span class="hljs-type">int</span>, 8000&gt;&gt;&gt; <span class="hljs-built_in">dp</span>(n + <span class="hljs-number">1</span>, vector&lt;array&lt;<span class="hljs-type">int</span>, <span class="hljs-number">8000</span>&gt;&gt;(m + <span class="hljs-number">1</span>, array&lt;<span class="hljs-type">int</span>, <span class="hljs-number">8000</span>&gt;&#123;&#125;));<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i)<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; ++j)<br>			cin &gt;&gt; a[i][j];<br>	<span class="hljs-type">int</span> tot = k * k * k;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>; sum &lt; k; ++sum)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> mul = <span class="hljs-number">0</span>; mul &lt; k; ++mul)<br>		&#123;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> cur = <span class="hljs-number">0</span>; cur &lt; k; ++cur)<br>			&#123;<br>				<span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> num = <span class="hljs-string">&#x27;0&#x27;</span>; num &lt;= <span class="hljs-string">&#x27;9&#x27;</span>; ++num)<br>				&#123;<br>					st[num][<span class="hljs-built_in">getid</span>(sum, mul, cur)] = <span class="hljs-built_in">getid</span>(sum, mul, (cur * <span class="hljs-number">10</span> + num - <span class="hljs-string">&#x27;0&#x27;</span>) % k);<br>				&#125;<br>				st[<span class="hljs-string">&#x27;+&#x27;</span>][<span class="hljs-built_in">getid</span>(sum, mul, cur)] = <span class="hljs-built_in">getid</span>((sum + mul * cur) % k, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>				st[<span class="hljs-string">&#x27;-&#x27;</span>][<span class="hljs-built_in">getid</span>(sum, mul, cur)] = <span class="hljs-built_in">getid</span>((sum + mul * cur) % k, k - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>				st[<span class="hljs-string">&#x27;*&#x27;</span>][<span class="hljs-built_in">getid</span>(sum, mul, cur)] = <span class="hljs-built_in">getid</span>(sum, (cur * mul) % k, <span class="hljs-number">0</span>);<br>			&#125;<br>		&#125;<br>	&#125;<br><br>	dp[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>][<span class="hljs-built_in">getid</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, (a[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] - <span class="hljs-string">&#x27;0&#x27;</span>) % k)] = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; ++j)<br>		&#123;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> sta = <span class="hljs-number">0</span>; sta &lt; tot; ++sta)<br>			&#123;<br>				<span class="hljs-keyword">if</span> (<span class="hljs-built_in">isdigit</span>(a[i][j]) || <span class="hljs-built_in">isdigit</span>(a[i][j - <span class="hljs-number">1</span>]))<br>					dp[i][j][st[a[i][j]][sta]] = (<span class="hljs-number">1ll</span> * dp[i][j][st[a[i][j]][sta]] + dp[i][j - <span class="hljs-number">1</span>][sta]) % MOD;<br>				<span class="hljs-keyword">if</span> (<span class="hljs-built_in">isdigit</span>(a[i][j]) || <span class="hljs-built_in">isdigit</span>(a[i - <span class="hljs-number">1</span>][j]))<br>					dp[i][j][st[a[i][j]][sta]] = (<span class="hljs-number">1ll</span> * dp[i][j][st[a[i][j]][sta]] + dp[i - <span class="hljs-number">1</span>][j][sta]) % MOD;<br>			&#125;<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>; sum &lt; k; ++sum)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> mul = <span class="hljs-number">0</span>; mul &lt; k; ++mul)<br>		&#123;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> cur = <span class="hljs-number">0</span>; cur &lt; k; ++cur)<br>			&#123;<br>				<span class="hljs-keyword">if</span> ((sum + mul * cur) % k == <span class="hljs-number">0</span>)<br>					ans += dp[n][m][<span class="hljs-built_in">getid</span>(sum, mul, cur)];<br>				ans %= MOD;<br>			&#125;<br>		&#125;<br>	&#125;<br>	cout &lt;&lt; ans &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>在刘春英老师发的题解上面补充</p>
-<p>我们可以先确定最小值。去寻找当 $a_i$ 作为最小值时，区间的最左端 $L$ 和最右端 $R$ 在什么地方。换句话说，在 $[l,r],(L\le l \le i,i\le r \le R)$ 内这个区间的最小值都是 $a_i$ 。先令  $a_0 &#x3D; a_{n+1} &#x3D; -2e9$ ，假设遍历到了 $a_i$ ，找到最大的 $0 \le j &lt;i$ ，满足 $a_j &lt; a_i$ ，记 $le_i&#x3D;j+1$。对于右边同理，找到最小的 $ i &lt; j \leq n + 1 $ ，满足 $ a_j \leq a_i $ ，记 $ ri_i &#x3D; j - 1$。至于为什么有一侧是严格小于，这是因为如果都是小于等于，后面算出来的区间就会有重复。举个例子，如果 $a&#x3D;[1,1,1,1,1,1]$ ，分别取第三个和第四个 $1$ ，按照正确的方法求出来的区间分别是 $[1,3]$ 、$[1,4]$ ，如果两侧都是小于等于，那么求出来的区间都会是 $[1,6]$ ，当第三个和第四个 $1$ 分别作为最小值时，求出来的区间可能会有重复，因此必须要有一侧是严格小于。用单调栈就可以实现。</p>
-<p>然后我们转化一下问题，当 $val$ 的大小为 $mid$ 时，二分求一下是否至少有 $k$ 个区间满足 $\max + \min \ge mid$ 。</p>
-<p>考虑 check，考虑枚举每个 $a_i$ 作为 $\min$ ，再在所有区间 $[l, r], le_i \leq l \leq i, i \leq r \leq ri_i$ 中，统计多少个区间满足 $ \max \geq mid - \min $ 。可以以 $i$ 为起点做前缀 $\max$ ， $i$ 为终点做后缀 $\max$ ，发现这两个数组具有单调性，于是又可以二分找到最近的满足条件的前后缀最大值的下标，假设不合适的左右下标为 $ l_0, r_0 $ 。那么不合适的区间个数就是 $(i - l_0 + 1) \times (r_0 - i + 1)$ ，再用总的 $(i - le_i + 1) \times (ri_i - i + 1)$ 减去即可。check 用 st 表二分，或者线段树上二分，复杂度都是 $O(n \log n)$ 。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> int long long</span><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">2e5</span> + <span class="hljs-number">50</span>;<br><span class="hljs-type">int</span> a[N];<br><span class="hljs-type">int</span> le[N], ri[N];<br><span class="hljs-type">int</span> lg2[N], f[N][<span class="hljs-number">20</span>];<br><span class="hljs-type">int</span> n, k;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-type">int</span> l, <span class="hljs-type">int</span> r)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> k = lg2[r - l + <span class="hljs-number">1</span>];<br>	<span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span>(f[l][k], f[r - (<span class="hljs-number">1</span> &lt;&lt; k) + <span class="hljs-number">1</span>][k]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> tot = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i)<br>	&#123;<br>		<span class="hljs-type">int</span> l = le[i] - <span class="hljs-number">1</span>, r = i + <span class="hljs-number">1</span>;<br>		<span class="hljs-type">int</span> L, R;<br>		<span class="hljs-keyword">while</span> (l + <span class="hljs-number">1</span> &lt; r)<br>		&#123;<br>			<span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">query</span>(mid, i) &lt; x - a[i])<span class="hljs-comment">//mid-min</span><br>				r = mid;<br>			<span class="hljs-keyword">else</span><br>				l = mid;<br>		&#125;<br>		L = r;<br>		l = i - <span class="hljs-number">1</span>, r = ri[i] + <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">while</span> (l + <span class="hljs-number">1</span> &lt; r)<br>		&#123;<br>			<span class="hljs-type">int</span> mid = (l + r) &gt;&gt; <span class="hljs-number">1</span>;<br>			<span class="hljs-keyword">if</span> (<span class="hljs-built_in">query</span>(i, mid) &lt; x - a[i])<br>				l = mid;<br>			<span class="hljs-keyword">else</span><br>				r = mid;<br>		&#125;<br>		R = l;<br>		tot += (i - le[i] + <span class="hljs-number">1</span>) * (ri[i] - i + <span class="hljs-number">1</span>) - (i - L + <span class="hljs-number">1</span>) * (R - i + <span class="hljs-number">1</span>);<br>	&#125;<br>	<span class="hljs-keyword">return</span> tot &gt;= k;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>	cin &gt;&gt; n &gt;&gt; k;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i)<br>		cin &gt;&gt; a[i];<br>	a[<span class="hljs-number">0</span>] = -inf, a[n + <span class="hljs-number">1</span>] = -inf;<br>	stack&lt;<span class="hljs-type">int</span>&gt; stk;<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; ++i)<br>		lg2[i] = lg2[i &gt;&gt; <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i)<br>		f[i][<span class="hljs-number">0</span>] = a[i];<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= lg2[n]; ++j) <span class="hljs-comment">// 初始化</span><br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i + (<span class="hljs-number">1</span> &lt;&lt; (j - <span class="hljs-number">1</span>)) &lt;= n; ++i)<br>		&#123;<br>			f[i][j] = <span class="hljs-built_in">max</span>(f[i][j - <span class="hljs-number">1</span>], f[i + (<span class="hljs-number">1</span> &lt;&lt; (j - <span class="hljs-number">1</span>))][j - <span class="hljs-number">1</span>]);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = n + <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; --i)<br>	&#123;<br><br>		<span class="hljs-keyword">while</span> (!stk.<span class="hljs-built_in">empty</span>() &amp;&amp; a[stk.<span class="hljs-built_in">top</span>()] &gt; a[i]) <span class="hljs-comment">// 此处可以更改比较关系</span><br>		&#123;<br>			le[stk.<span class="hljs-built_in">top</span>()] = i + <span class="hljs-number">1</span>;<br>			stk.<span class="hljs-built_in">pop</span>();<br>		&#125;<br>		stk.<span class="hljs-built_in">push</span>(i);<br>	&#125;<br>	<span class="hljs-keyword">while</span> (!stk.<span class="hljs-built_in">empty</span>())<br>		stk.<span class="hljs-built_in">pop</span>();<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= n + <span class="hljs-number">1</span>; ++i)<br>	&#123;<br><br>		<span class="hljs-keyword">while</span> (!stk.<span class="hljs-built_in">empty</span>() &amp;&amp; a[stk.<span class="hljs-built_in">top</span>()] &gt;= a[i]) <span class="hljs-comment">// 此处可以更改比较关系</span><br>		&#123;<br>			ri[stk.<span class="hljs-built_in">top</span>()] = i - <span class="hljs-number">1</span>;<br>			stk.<span class="hljs-built_in">pop</span>();<br>		&#125;<br>		stk.<span class="hljs-built_in">push</span>(i);<br>	&#125;<br><br>	<span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, r = inf;<br>	<span class="hljs-keyword">while</span> (l + <span class="hljs-number">1</span> &lt; r)<br>	&#123;<br>		<span class="hljs-type">int</span> mid = l + r &gt;&gt; <span class="hljs-number">1</span>;<br>		<span class="hljs-keyword">if</span> (<span class="hljs-built_in">check</span>(mid)) <span class="hljs-comment">// 二分答案 if(check(mid))</span><br>			l = mid;	<span class="hljs-comment">// 最小化</span><br>		<span class="hljs-keyword">else</span><br>			r = mid;<br>	&#125;<br>	cout &lt;&lt; l &lt;&lt; endl;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -320,8 +343,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【25杭电春季营热身赛】 T1001 氯化钠</div>
-      <div>http://example.com/2025/03/05/problem2/</div>
+      <div>【25杭电春季营（2）】 T1007 学计算导致的</div>
+      <div>http://example.com/2025/03/19/problem3/</div>
     </div>
     <div class="license-meta">
       
@@ -333,7 +356,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年3月5日</div>
+          <div>2025年3月19日</div>
         </div>
       
       
@@ -365,18 +388,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/19/problem3/" title="【25杭电春季营（2）】 T1007 学计算导致的">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【25杭电春季营（2）】 T1007 学计算导致的</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/03/01/problem1/" title="【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对">
-                        <span class="hidden-mobile">【25杭电春季营热身赛】 T1006 对吗？对的对的 不对不对</span>
+                      <a href="/2025/03/05/problem2/" title="【25杭电春季营热身赛】 T1001 氯化钠">
+                        <span class="hidden-mobile">【25杭电春季营热身赛】 T1001 氯化钠</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
